@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--added meta tag by myself-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>QuickReview</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div id="overlay" class="overlay"></div>
+
+
+  <!-- Header -->
+  <header>
+    <div class="product-tag tag-new">New</div><h1>QuickReview</h1>
+    <button id="cartToggleBtn" class="cart-icon-btn">🛒</button>
+
+  </header>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <input type="text" placeholder="Search a product..." id="searchInput">
+  </section>
+  <!--Category Filter Buttons-->
+  <div class="filter-buttons">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('phones')">Phones</button>
+  <button onclick="filterProducts('laptops')">Laptops</button>
+  <button onclick="filterProducts('accessories')">Accessories</button>
+</div>
+
+  <!---->
+  <!-- Product Grid -->
+  <section class="product-grid" id="productGrid">
+    <!-- Product cards will go here -->
+    <!-- Phones -->
+<div class="product-card" data-category="phones" 
+     onclick="showProductDetail('iPhone 15', '₹79,999', 'Powerful A16 chip, 48MP camera, fast charging', 'images/iphone.jpg')">
+  <div class="product-tag tag-new">New</div>
+     <img src="images/iphone.jpg" alt="iPhone 15" />
+  <h3>iPhone 15</h3>
+  <p>₹79,999</p>
+  <div class="product-rating">★★★★☆</div>
+
+</div>
+
+<div class="product-card" data-category="phones" 
+     onclick="showProductDetail('Samsung Galaxy S23', '₹69,999', 'Snapdragon 8 Gen 2, 120Hz AMOLED, IP68', 'images/galaxy.jpg')">
+  <div class="product-tag tag-new">New</div>
+     <img src="images/galaxy.jpg" alt="Galaxy S23" />
+  <h3>Samsung Galaxy S23</h3>
+  <p>₹69,999</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="phones" 
+     onclick="showProductDetail('Redmi Note 12 Pro', '₹24,999', 'OLED display, 108MP camera, 67W charging', 'images/redmi.jpg')">
+  <div class="product-tag tag-best">Best Seller</div>
+     <img src="images/redmi.jpg" alt="Redmi Note 12 Pro" />
+  <h3>Redmi Note 12 Pro</h3>
+  <p>₹24,999</p>
+  <div class="product-rating">★★★★☆</div>
+  
+</div>
+
+<div class="product-card" data-category="phones" 
+     onclick="showProductDetail('Nothing Phone (2)', '₹44,999', 'Glyph lights, Snapdragon 8+, Pure Android UI', 'images/nothing.jpg')">
+  <div class="product-tag tag-new">New</div>
+     <img src="images/nothing.jpg" alt="Nothing Phone 2" />
+  <h3>Nothing Phone (2)</h3>
+  <p>₹44,999</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="phones" 
+     onclick="showProductDetail('OnePlus Nord CE 3', '₹27,999', '120Hz AMOLED, Snapdragon 782G, 80W fast charging', 'images/oneplus.jpg')">
+  <div class="product-tag tag-best">Best Seller</div>
+     <img src="images/oneplus.jpg" alt="OnePlus Nord CE 3" />
+  <h3>OnePlus Nord CE 3</h3>
+  <p>₹27,999</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<!-- Accessories -->
+<div class="product-card" data-category="accessories" 
+     onclick="showProductDetail('boAt Rockerz 255', '₹1,199', 'Wireless neckband, 10mm drivers, IPX5 water resistant', 'images/boat.jpg')">
+  
+<div class="product-tag tag-hot">Hot</div>
+     <img src="images/boat.jpg" alt="boAt Rockerz 255" />
+  <h3>boAt Rockerz 255</h3>
+  <p>₹1,199</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="accessories" 
+     onclick="showProductDetail('Logitech MX Master 3', '₹7,495', 'Ergonomic mouse, USB-C charging, customizable buttons', 'images/mx.jpg')">
+  
+<div class="product-tag tag-hot">Hot</div>
+     <img src="images/mx.jpg" alt="MX Master 3" />
+  <h3>Logitech MX Master 3</h3>
+  <p>₹7,495</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="accessories" 
+     onclick="showProductDetail('Apple AirPods Pro', '₹19,999', 'ANC, Spatial Audio, MagSafe case', 'images/airpods.jpg')">
+  
+<div class="product-tag tag-new">New</div>
+     <img src="images/airpods.jpg" alt="AirPods Pro" />
+  <h3>Apple AirPods Pro</h3>
+  <p>₹19,999</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="accessories" 
+     onclick="showProductDetail('Noise ColorFit Ultra 2', '₹2,999', 'AMOLED display, 100+ watch faces, SpO2 tracking', 'images/noise.jpg')">
+   <div class="product-tag tag-best">Best Seller</div>
+     <img src="images/noise.jpg" alt="Noise ColorFit" />
+  <h3>Noise ColorFit Ultra 2</h3>
+  <p>₹2,999</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="accessories" 
+     onclick="showProductDetail('Samsung 25W Charger', '₹1,299', 'Fast charging adapter, USB-C, 25W output', 'images/samsungcharger.jpg')">
+  <div class="product-tag tag-limited">Limited</div>
+
+     <img src="images/samsungcharger.jpg" alt="Samsung Charger" />
+  <h3>Samsung 25W Charger</h3>
+  <p>₹1,299</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<!-- Laptops -->
+<div class="product-card" data-category="laptops" 
+     onclick="showProductDetail('MacBook Air M2', '₹1,14,900', 'Apple M2 chip, 13.6-inch Retina display, 18hr battery', 'images/macbook.jpg')">
+  <div class="product-tag tag-best">Best Seller</div>
+     <img src="images/macbook.jpg" alt="MacBook Air M2" />
+  <h3>MacBook Air M2</h3>
+  <p>₹1,14,900</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="laptops" 
+     onclick="showProductDetail('ASUS ROG Strix G16', '₹1,39,990', 'Intel i7 13th Gen, RTX 4060, 165Hz QHD display', 'images/asusrog.jpg')">
+  <div class="product-tag tag-limited">Limited</div>
+     <img src="images/asusrog.jpg" alt="ASUS ROG Strix" />
+  <h3>ASUS ROG Strix G16</h3>
+  <p>₹1,39,990</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="laptops" 
+     onclick="showProductDetail('HP Pavilion 15', '₹62,999', 'Intel i5, FHD display, Alexa built-in, 512GB SSD', 'images/hp.jpg')">
+  <div class="product-tag tag-limited">Limited</div>
+
+     <img src="images/hp.jpg" alt="HP Pavilion" />
+  <h3>HP Pavilion 15</h3>
+  <p>₹62,999</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="laptops" 
+     onclick="showProductDetail('Dell Inspiron 14', '₹56,499', 'Intel i5, thin design, 8GB RAM, FHD screen', 'images/dell.jpg')">
+  <div class="product-tag tag-hot">Hot</div>
+     <img src="images/dell.jpg" alt="Dell Inspiron" />
+  <h3>Dell Inspiron 14</h3>
+  <p>₹56,499</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+<div class="product-card" data-category="laptops" 
+     onclick="showProductDetail('Lenovo Ideapad Slim 5', '₹59,990', 'Ryzen 5 7530U, 16GB RAM, 512GB SSD', 'images/lenovo.jpg')">
+  <div class="product-tag tag-best">Best Seller</div>
+     <img src="images/lenovo.jpg" alt="Lenovo Ideapad" />
+  <h3>Lenovo Ideapad Slim 5</h3>
+  <p>₹59,990</p>
+  <div class="product-rating">★★★★☆</div>
+</div>
+
+
+<!--product detail-->
+
+ <!-- Product Detail Section -->
+<section class="product-detail" id="productDetail">
+  <button id="closeDetail" class="close-btn">✖</button>
+
+  <div class="detail-img">
+    <img id="detailImage" src="images/galaxy.jpg" alt="Product Image" />
+  </div>
+  <div class="detail-content">
+    <h2 id="detailTitle">iphone15</h2>
+    <p class="price" id="detailPrice">999</p>
+    <p class="desc" id="detailDesc">Description here</p>
+    <button class="add-to-cart" onclick="addToCart()">Add to Cart 🛒</button>
+
+    
+    <!-- Add Tab Buttons + Content Areas -->
+     <div class="tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn active" onclick="showTab('specs')">🛠 Specs</button>
+    <button class="tab-btn" onclick="showTab('reviews')">💬 Reviews</button>
+    <button class="tab-btn" onclick="showTab('faq')">❓ FAQ</button>
+  </div>
+
+  <div class="tab-content" id="specs">
+    <p>• High-res display<br>• Long battery life<br>• Fast charging</p>
+  </div>
+  <div class="tab-content" id="reviews" style="display: none;">
+    <p>⭐ 4.8 – “Amazing performance!”<br>⭐ 4.5 – “Worth the price.”</p>
+  </div>
+  <div class="tab-content" id="faq" style="display: none;">
+    <p>Q: Does it support fast charging?<br>A: Yes, 33W fast charging is supported.</p>
+  </div>
+</div>
+
+
+    ...
+  </div>
+</section>
+
+
+
+  </section>
+<!--cart sidebar-->
+<div class="cart" id="cart">
+  <button class="cart-close" onclick="closeCart()">❌</button>
+  <h3>Your Cart</h3>
+  <ul id="cartList"></ul>
+  <p>Total: ₹<span id="cartTotal">0</span></p>
+</div>
+
+
+
+<!--java script-->
+  <script src="script.js">
+
+    
+  function openTab(evt, tabId) {
+    let tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => content.style.display = 'none');
+
+    let tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    document.getElementById(tabId).style.display = 'block';
+    evt.currentTarget.classList.add('active');
+  }
+
+
+</script>
+</body>
+
+  
+  </script>
+</body>
+</html>
